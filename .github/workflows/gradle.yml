@@ -14,8 +14,8 @@ jobs:
       with:
         java-version: 1.8
     - name: Update Ubuntu
-      run: sudo apt-get update -y
+      run: sudo add-apt-repository ppa:cwchien/gradle;sudo apt-get update -y
     - name: Install Gradle
       run: sudo apt-get install gradle
     - name: Build with Gradle
-      run: gradle -v
+      run: gradle build
