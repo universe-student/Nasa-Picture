@@ -21,3 +21,7 @@ jobs:
       run: gradle build
     - name: Take a Look
       run: ls -laR
+    - name: Docker Build
+      run: docker build -t nasa-picture .
+    - name: Take Another Look
+      run: ls -laR
