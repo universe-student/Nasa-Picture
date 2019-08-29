@@ -18,4 +18,4 @@ jobs:
     - name: Install Gradle
       run: sudo apt-get install gradle
     - name: Build with Gradle
-      run: gradle build
+      run: gradle -v
