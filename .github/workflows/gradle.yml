@@ -16,4 +16,4 @@ jobs:
     - name: Install Gradle
       run: sudo apt install gradle
     - name: Build with Gradle
-      run: gradlew build
+      run: ./gradlew build
