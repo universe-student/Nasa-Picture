@@ -14,6 +14,6 @@ jobs:
       with:
         java-version: 1.8
     - name: Install Gradle
-      run: sdk install gradle 5.6.1
+      run: apt install gradle
     - name: Build with Gradle
       run: gradlew build
