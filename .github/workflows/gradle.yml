@@ -15,5 +15,7 @@ jobs:
         java-version: 1.8
     - name: Install Gradle
       run: sudo apt install gradle
+    - name: Build Gradle Wrapper
+      run: gradle wrapper
     - name: Build with Gradle
-      run: gradle build
+      run: ./gradlew build
