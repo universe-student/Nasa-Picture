@@ -13,9 +13,9 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
+    - name: Update Ubuntu
+      run: sudo apt-get update -y
     - name: Install Gradle
-      run: sudo apt install gradle
-    - name: Build Gradle Wrapper
-      run: gradle wrapper
+      run: sudo apt-get install gradle
     - name: Build with Gradle
-      run: ./gradlew build
+      run: gradle build
