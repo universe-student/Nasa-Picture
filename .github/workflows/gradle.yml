@@ -14,7 +14,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Access AWS Jump Box
-      run: echo $AWSPW | ssh ubuntu@ec2-3-15-159-151.us-east-2.compute.amazonaws.com "pwd"
+      run: echo $AWSPW | ssh ansible@ec2-3-15-159-151.us-east-2.compute.amazonaws.com "pwd"
       env:
         $AWSPW: ${{secrets.awspassword}}
       
