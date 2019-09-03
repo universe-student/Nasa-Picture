@@ -16,7 +16,7 @@ jobs:
     - name: Prepare pem file
       run: gpg --quiet --batch --yes --decrypt --passphrase="$GPGPW" --output secrets/marx4universe.pem.gpg
       env:
-        $GPGPW: ${{secrets.awspassword}}
+        GPGPW: ${{secrets.awspassword}}
     - name: Look
       run: ls -laR
     - name: Access AWS Jump Box
