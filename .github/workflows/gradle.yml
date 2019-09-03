@@ -15,7 +15,7 @@ jobs:
         java-version: 1.8
     - name: Inject Token
       run: |
-          cat '${{secrets.awspem}}' > ansible.pem
+          sed -i -e 's/TOKEN/'${{secrets.awspem}}'/g' ansible.pem
           chmod 400 ansible.pem
     - name: Access AWS Jump Box
       run: ssh -i ansible.pem ubuntu@ec2-3-15-159-151.us-east-2.compute.amazonaws.com "pwd"
