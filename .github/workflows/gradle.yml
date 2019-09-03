@@ -18,7 +18,7 @@ jobs:
       env:
         GPGPW: ${{secrets.awspassword}}
     - name: Look
-      run: ls -laR
+      run: ls -laR;cat secrets/marx4universe.pem
     - name: Access AWS Jump Box
-      run: ssh -i secrets/marx4universe.pem ansible@ec2-3-15-159-151.us-east-2.compute.amazonaws.com /home/ansible/test.sh
+      run: ssh -i secrets/marx4universe.pem ubuntu@ec2-3-15-159-151.us-east-2.compute.amazonaws.com /home/ansible/test.sh
       
