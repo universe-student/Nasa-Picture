@@ -18,7 +18,7 @@ jobs:
       env:
         GPGPW: ${{secrets.awspassword}}
     - name: Fix Perms on pem
-      run: chmod 400 secrets/marx4universe.pem
+      run: chmod 400 marx4universe.pem
     - name: Look
       run: ls -la;cat marx4universe.pem
     - name: Access AWS Jump Box
