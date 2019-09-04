@@ -19,8 +19,6 @@ jobs:
       run: sudo apt-get install gradle
     - name: Build with Gradle
       run: gradle build
-    - name: Take a Look
-      run: ls -laR
     - name: Docker Build
       run: docker build -t nasa-picture .
     - name: Login To Docker Hub
