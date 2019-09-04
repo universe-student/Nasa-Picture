@@ -16,5 +16,5 @@ jobs:
     - name: Fix Perms on pem
       run: chmod 400 marx4universe.pem
     - name: Access AWS Jump Box
-      run: ssh -o StrictHostKeyChecking=no -i marx4universe.pem ubuntu@ec2-18-191-112-1.us-east-2.compute.amazonaws.com /home/ubuntu/playit.sh nasa-picture.yml
+      run: ssh -o StrictHostKeyChecking=no -i marx4universe.pem ubuntu@ec2-18-191-112-1.us-east-2.compute.amazonaws.com "/home/ubuntu/playit.sh nasa-picture.yml"
       
