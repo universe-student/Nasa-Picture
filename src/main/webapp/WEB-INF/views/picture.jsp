@@ -11,7 +11,7 @@
     <div class="container" style="margin-top: 50px;">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">GitHub DevOps</h5>
+            <h5 class="card-title">GitHub DevOps CI/CD</h5>
             <h5 class="card-title">${ picture.title }</h5>
             <p class="card-text">${ picture.explanation }</p>
             <p class="card-text"><small class="text-muted">${ picture.date }</small></p>
