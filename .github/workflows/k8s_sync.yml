@@ -23,5 +23,5 @@ jobs:
     - name: Kubernetes kubectl
       run: kubectl get nodes
       env: 
-        KUBECONFIG: 'secrets/k8s_config'
+        KUBECONFIG: k8s_config
       
