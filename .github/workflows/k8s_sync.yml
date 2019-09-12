@@ -21,7 +21,7 @@ jobs:
         GPGPW: ${{secrets.awspassword}}
        
     - name: Kubernetes kubectl update application deployment
-      run: kubectl create -f kubernetes/nasa-picture.yml
+      run: kubectl update -f kubernetes/nasa-picture.yml
       env: 
         KUBECONFIG: k8s_config
 
