@@ -1,3 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: nasa-picture
+spec:
+  selector:
+    app: nasa-picture
+  ports:
+  - protocol: TCP
+    port: 8080
+    nodePort: 30000
+  type: NodePort
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
