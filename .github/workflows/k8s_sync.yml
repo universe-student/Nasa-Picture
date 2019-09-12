@@ -20,8 +20,18 @@ jobs:
       env:
         GPGPW: ${{secrets.awspassword}}
        
-    - name: Kubernetes kubectl
-      run: kubectl get nodes
+    - name: Kubernetes kubectl create application deployment
+      run: kubectl create -f kubernetes/nasa-picture.yml
       env: 
         KUBECONFIG: k8s_config
-      
+
+    - name: Kubernetes kubectl get deployments
+      run: kubectl get deployments
+      env: 
+        KUBECONFIG: k8s_config
+
+    - name: Kubernetes kubectl get pods
+      run: kubectl get pods
+      env: 
+        KUBECONFIG: k8s_config
+
